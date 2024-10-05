@@ -1,9 +1,12 @@
-[gd_scene format=3 uid="uid://cq33w8866mre6"]
+[gd_scene load_steps=3 format=3 uid="uid://cq33w8866mre6"]
 
-[node name="Node3D" type="Node3D"]
+[ext_resource type="PackedScene" uid="uid://cleewddv4crxr" path="res://src/Spider.tscn" id="1_3rdjw"]
+[ext_resource type="PackedScene" uid="uid://b3mflse8qru72" path="res://src/Room.tscn" id="2_5rvfb"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+[node name="Root" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.493505, -0.0496955, 0.240696)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="Spider" parent="." instance=ExtResource("1_3rdjw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.328737, 1.70316, -0.810429)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="Room" parent="." instance=ExtResource("2_5rvfb")]

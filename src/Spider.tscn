@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cleewddv4crxr"]
+
+[ext_resource type="Script" path="res://scripts/spider.gd" id="1_gu06b"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7g43b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xir4k"]
+albedo_color = Color(1, 0, 0, 1)
+roughness = 0.19
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2vgf0"]
+
+[node name="Spider" type="CharacterBody3D"]
+script = ExtResource("1_gu06b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_7g43b")
+surface_material_override/0 = SubResource("StandardMaterial3D_xir4k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_2vgf0")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.943801, 0.330514, 0, -0.330514, 0.943801, 0, 2.8294, 4.91634)
+current = true
