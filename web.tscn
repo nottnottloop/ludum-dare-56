@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://npu2cicjuhfw"]
+
+[sub_resource type="Curve3D" id="Curve3D_f4wcl"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="Web" type="Node3D"]
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.404997, -0.0728111, -0.262113)
+polygon = PackedVector2Array(0.101052, 0.175673, 0.138643, 0.150745, 0.153515, 0.119858, 0.143479, 0.0784811, 0.0976724, 0.0584674, 0.054857, 0.0709869, 0.0364308, 0.114346, 0.0584068, 0.155178)
+mode = 2
+path_node = NodePath("../Path")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+smooth_faces = true
+
+[node name="Path" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.385792, 0, 0)
+curve = SubResource("Curve3D_f4wcl")

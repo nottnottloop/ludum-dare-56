@@ -1,9 +1,626 @@
-[gd_scene format=3 uid="uid://c1wdcjmb7becc"]
+[gd_scene load_steps=14 format=3 uid="uid://c1wdcjmb7becc"]
+
+[ext_resource type="PackedScene" uid="uid://boddo88bkh1cj" path="res://person.tscn" id="1_cl6tw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kmcds"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 1.41
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ka0bm"]
+albedo_color = Color(0.442911, 0.442911, 0.442911, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6hbb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x2vil"]
+albedo_color = Color(0.756863, 0.603922, 0.419608, 1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6q3if"]
+albedo_color = Color(0.615433, 0.897063, 0.95927, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mr6ce"]
+albedo_color = Color(0.615686, 0.898039, 0.960784, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcw72"]
+albedo_color = Color(0.571063, 0.47671, 0.353154, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_56cq8"]
+albedo_color = Color(0.756863, 0.603922, 0.419608, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vds0g"]
+albedo_color = Color(0.319901, 0.379763, 0.425479, 1)
+roughness = 0.35
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mt11"]
+albedo_color = Color(0.321569, 0.380392, 0.423529, 1)
+roughness = 0.0
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_qp5wr"]
+vertices = PackedVector3Array(-84.4683, 56.5019, -84, -84.4683, 56.5019, 84.6, 84.1317, 56.5019, 84.6, 84.1317, 56.5019, -84, -79.6683, 0.5019, -55.8, -73.6683, 0.5019, -55.8, -73.6683, 0.5019, -60.6, -71.2683, 0.5019, -64.2, -79.6683, 0.5019, -78.6, -68.8683, 0.5019, -65.4, -60.4683, 0.5019, -65.4, -60.4683, 0.5019, -78.6, -32.8683, 0.5019, -77.4, -29.8683, 0.5019, -77.4, -29.8683, 0.5019, -78.6, -53.2683, 0.5019, -64.2, -50.8683, 0.5019, -60.6, -47.8683, 0.5019, -61.8, -48.4683, 0.5019, -66, -45.4683, 0.5019, -70.8, -55.6683, 0.5019, -65.4, -25.0683, 0.5019, -76.2, 14.5317, 0.5019, -65.4, 19.3317, 0.5019, -65.4, 19.3317, 0.5019, -78.6, 12.1317, 0.5019, -64.2, 9.73174, 0.5019, -60.6, 7.33174, 0.5019, -37.8, 9.73174, 0.5019, -42, -22.6683, 0.5019, -72.6, -22.6683, 0.5019, -37.8, 37.3317, 0.5019, -65.4, 37.3317, 0.5019, -78.6, 42.1317, 0.5019, -65.4, 44.5317, 0.5019, -64.2, 46.9317, 0.5019, -60.6, 78.7318, 0.5019, -78.6, 46.9317, 0.5019, -41.4, 48.7318, 0.5019, -37.8, 78.7318, 0.5019, -37.8, -43.6683, 0.5019, -58.2, -50.8683, 0.5019, -26.4, -37.0683, 0.5019, -26.4, -37.0683, 0.5019, -60.6, -41.2683, 0.5019, -58.2, -79.6683, 0.5019, -26.4, -73.6683, 0.5019, -26.4, 9.73174, 0.5019, -18.6, 9.73174, 0.5019, -33, 7.33174, 0.5019, -36, -22.6683, 0.5019, -14.4, 7.33174, 0.5019, -14.4, 46.9317, 0.5019, -33.6, 46.9317, 0.5019, -18, 48.7318, 0.5019, -14.4, 78.7318, 0.5019, -14.4, 9.73174, 0.5019, 3.6, 9.73174, 0.5019, -9.60001, 7.33174, 0.5019, -12.6, -22.6683, 0.5019, 7.8, 7.33174, 0.5019, 7.8, 46.9317, 0.5019, -10.2, 46.9317, 0.5019, 4.2, 48.7318, 0.5019, 7.8, 78.7318, 0.5019, 7.8, -73.6683, 0.5019, -1.2, -55.0683, 0.5019, -1.2, -54.4683, 0.5019, -12.6, -79.6683, 0.5019, -12.6, -79.6683, 0.5019, 27.6, -78.4683, 0.5019, 27.6, -78.4683, 0.5019, 3.6, -77.2683, 0.5019, 1.2, -46.6683, 0.5019, 3.6, -46.6683, 0.5019, 8.39999, -37.0683, 0.5019, 8.39999, -51.4683, 0.5019, -1.2, -47.8683, 0.5019, 1.2, -37.0683, 0.5019, -12.6, 7.33174, 0.5019, 30, 9.73174, 0.5019, 27, 9.73174, 0.5019, 12.6, 7.33174, 0.5019, 9.6, -22.6683, 0.5019, 31.8, 7.33174, 0.5019, 31.8, 46.9317, 0.5019, 12, 46.9317, 0.5019, 27.6, 48.7318, 0.5019, 31.2, 78.7318, 0.5019, 31.2, -46.6683, 0.5019, 33, -37.0683, 0.5019, 33, -40.6683, 0.5019, 58.2, -38.2683, 0.5019, 52.2, -47.2683, 0.5019, 51.6, -49.0683, 0.5019, 54.6, -76.0683, 0.5019, 54.6, -78.4683, 0.5019, 51, -79.6683, 0.5019, 79.8, -51.4683, 0.5019, 55.8, -40.6683, 0.5019, 63.6, -73.6683, 0.5019, 55.8, -37.0683, 0.5019, 79.8, -37.0683, 0.5019, 67.2, -39.4683, 0.5019, 66, 82.3317, 0.5019, 61.2, 86.5317, 1.0019, 61.2, 86.5317, 1.0019, 59.4, 81.1317, 0.5019, 58.2, 46.9317, 0.5019, 35.4, 46.9317, 0.5019, 54.6, 70.9317, 0.5019, 67.2, 78.7318, 0.5019, 54.6, 45.1317, 0.5019, 57.6, -29.8683, 0.5019, 42.6, -29.8683, 0.5019, 43.8, -27.4683, 0.5019, 43.8, -27.4683, 0.5019, 42.6, -22.6683, 0.5019, 37.8, -23.8683, 0.5019, 46.2, -22.6683, 0.5019, 51.6, 9.73174, 0.5019, 51.6, 9.73174, 0.5019, 36, -23.8683, 0.5019, 40.2, -32.2683, 0.5019, 43.8, -32.2683, 0.5019, 42.6, -36.4683, 0.5019, 46.8, -35.8683, 0.5019, 40.2, -37.0683, 0.5019, 37.8, 90.1317, 1.0019, 58.2, 99.7318, 1.0019, 61.2, 99.7318, 1.0019, 32.4, 92.5317, 1.0019, 32.4, 92.5317, 1.0019, 54.6, 19.3317, 0.5019, 79.8, 19.3317, 0.5019, 59.4, 14.5317, 0.5019, 59.4, 12.1317, 0.5019, 58.2, 9.73174, 0.5019, 54.6, -22.6683, 0.5019, 79.8, 42.1317, 0.5019, 59.4, 37.3317, 0.5019, 59.4, 37.3317, 0.5019, 79.8, 67.9317, 0.5019, 76.8, 66.7318, 0.5019, 74.4, 67.9317, 0.5019, 69.6, 72.1317, 0.5019, 79.8, 74.5317, 0.5019, 79.2, 78.7318, 0.5019, 79.8, 78.7318, 0.5019, 77.4)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 4), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 8), PackedInt32Array(11, 10, 9), PackedInt32Array(9, 7, 11), PackedInt32Array(11, 7, 8), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 11), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 15), PackedInt32Array(11, 12, 19), PackedInt32Array(18, 15, 20), PackedInt32Array(20, 10, 18), PackedInt32Array(18, 10, 19), PackedInt32Array(19, 10, 11), PackedInt32Array(21, 13, 14), PackedInt32Array(24, 23, 22), PackedInt32Array(25, 24, 22), PackedInt32Array(25, 26, 24), PackedInt32Array(24, 26, 21), PackedInt32Array(24, 21, 14), PackedInt32Array(28, 27, 26), PackedInt32Array(26, 27, 30), PackedInt32Array(26, 30, 29), PackedInt32Array(26, 29, 21), PackedInt32Array(24, 32, 23), PackedInt32Array(23, 32, 31), PackedInt32Array(33, 31, 32), PackedInt32Array(34, 33, 32), PackedInt32Array(34, 32, 35), PackedInt32Array(35, 32, 36), PackedInt32Array(37, 35, 38), PackedInt32Array(38, 35, 39), PackedInt32Array(39, 35, 36), PackedInt32Array(17, 40, 16), PackedInt32Array(16, 40, 41), PackedInt32Array(41, 40, 42), PackedInt32Array(44, 43, 42), PackedInt32Array(40, 44, 42), PackedInt32Array(46, 45, 5), PackedInt32Array(5, 45, 4), PackedInt32Array(48, 47, 49), PackedInt32Array(49, 47, 51), PackedInt32Array(49, 51, 50), PackedInt32Array(49, 50, 30), PackedInt32Array(30, 27, 49), PackedInt32Array(53, 52, 54), PackedInt32Array(54, 52, 38), PackedInt32Array(54, 38, 39), PackedInt32Array(54, 39, 55), PackedInt32Array(57, 56, 58), PackedInt32Array(58, 56, 60), PackedInt32Array(58, 60, 59), PackedInt32Array(58, 59, 50), PackedInt32Array(50, 51, 58), PackedInt32Array(62, 61, 63), PackedInt32Array(63, 61, 54), PackedInt32Array(63, 54, 55), PackedInt32Array(63, 55, 64), PackedInt32Array(66, 65, 67), PackedInt32Array(67, 65, 68), PackedInt32Array(70, 69, 71), PackedInt32Array(71, 69, 68), PackedInt32Array(68, 65, 72), PackedInt32Array(71, 68, 72), PackedInt32Array(75, 74, 73), PackedInt32Array(76, 66, 67), PackedInt32Array(73, 77, 75), PackedInt32Array(75, 77, 78), PackedInt32Array(78, 77, 67), PackedInt32Array(77, 76, 67), PackedInt32Array(80, 79, 81), PackedInt32Array(81, 79, 82), PackedInt32Array(82, 79, 83), PackedInt32Array(82, 83, 59), PackedInt32Array(59, 60, 82), PackedInt32Array(79, 84, 83), PackedInt32Array(86, 85, 87), PackedInt32Array(87, 85, 63), PackedInt32Array(87, 63, 64), PackedInt32Array(87, 64, 88), PackedInt32Array(74, 75, 89), PackedInt32Array(89, 75, 90), PackedInt32Array(94, 93, 91), PackedInt32Array(91, 93, 92), PackedInt32Array(97, 96, 95), PackedInt32Array(94, 91, 98), PackedInt32Array(98, 91, 99), PackedInt32Array(97, 95, 100), PackedInt32Array(103, 102, 101), PackedInt32Array(99, 103, 98), PackedInt32Array(98, 103, 101), PackedInt32Array(98, 101, 100), PackedInt32Array(100, 101, 97), PackedInt32Array(70, 96, 69), PackedInt32Array(69, 96, 97), PackedInt32Array(105, 104, 106), PackedInt32Array(106, 104, 107), PackedInt32Array(108, 87, 109), PackedInt32Array(109, 87, 110), PackedInt32Array(110, 87, 111), PackedInt32Array(111, 87, 88), PackedInt32Array(107, 104, 111), PackedInt32Array(111, 104, 110), PackedInt32Array(110, 112, 109), PackedInt32Array(116, 115, 113), PackedInt32Array(113, 115, 114), PackedInt32Array(118, 117, 119), PackedInt32Array(119, 117, 84), PackedInt32Array(119, 84, 121), PackedInt32Array(119, 121, 120), PackedInt32Array(116, 122, 115), PackedInt32Array(115, 122, 118), PackedInt32Array(117, 83, 84), PackedInt32Array(118, 122, 117), PackedInt32Array(124, 113, 123), PackedInt32Array(123, 113, 114), PackedInt32Array(126, 125, 127), PackedInt32Array(127, 125, 92), PackedInt32Array(127, 92, 93), PackedInt32Array(127, 93, 89), PackedInt32Array(124, 123, 126), PackedInt32Array(126, 123, 125), PackedInt32Array(89, 90, 127), PackedInt32Array(106, 128, 105), PackedInt32Array(105, 128, 129), PackedInt32Array(131, 130, 132), PackedInt32Array(132, 130, 129), PackedInt32Array(129, 128, 132), PackedInt32Array(135, 134, 133), PackedInt32Array(136, 135, 133), PackedInt32Array(136, 133, 137), PackedInt32Array(137, 133, 138), PackedInt32Array(137, 138, 119), PackedInt32Array(119, 120, 137), PackedInt32Array(141, 140, 139), PackedInt32Array(139, 112, 141), PackedInt32Array(141, 112, 143), PackedInt32Array(141, 143, 142), PackedInt32Array(112, 110, 144), PackedInt32Array(112, 144, 143), PackedInt32Array(141, 142, 145), PackedInt32Array(134, 140, 133), PackedInt32Array(133, 140, 141), PackedInt32Array(148, 147, 146)]
+geometry_parsed_geometry_type = 2
+geometry_source_geometry_mode = 1
+geometry_source_group_name = &"nav"
+cell_size = 0.6
+agent_height = 20.05
+agent_radius = 4.97
+agent_max_climb = 6.0
+filter_ledge_spans = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ubyie"]
+size = Vector3(119.101, 24.6686, 122.549)
 
 [node name="root" type="Node3D"]
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+[node name="No Collide" type="CSGCombiner3D" parent="."]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31577, -0.00109863, 0.291832)
-size = Vector3(4.21136, 0.177002, 4.33253)
+[node name="Light" type="CSGBox3D" parent="No Collide"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27094, 54.2148, -1.13513)
+size = Vector3(10, 1, 10)
+material = SubResource("StandardMaterial3D_kmcds")
+
+[node name="Light2" type="CSGBox3D" parent="No Collide"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.2766, 54.2148, -62.9404)
+size = Vector3(10, 1, 10)
+material = SubResource("StandardMaterial3D_kmcds")
+
+[node name="Light3" type="CSGBox3D" parent="No Collide"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.4555, 54.2148, 64.1038)
+size = Vector3(10, 1, 10)
+material = SubResource("StandardMaterial3D_kmcds")
+
+[node name="Light5" type="CSGBox3D" parent="No Collide"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.4555, 54.2148, -64.1477)
+size = Vector3(10, 1, 10)
+material = SubResource("StandardMaterial3D_kmcds")
+
+[node name="Light4" type="CSGBox3D" parent="No Collide"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.0915, 54.2148, 64.1038)
+size = Vector3(10, 1, 10)
+material = SubResource("StandardMaterial3D_kmcds")
+
+[node name="Person" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.2877, 0)
+
+[node name="Person2" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.2877, -44.86)
+
+[node name="Person3" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.4183, 22.2877, -44.86)
+
+[node name="Person4" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.3095, 22.2877, -44.86)
+
+[node name="Person5" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.3095, 22.2877, -6.53617)
+
+[node name="Person6" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.3095, 22.2877, 68.2207)
+
+[node name="Person7" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.088, 22.2877, 68.2207)
+
+[node name="Person8" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.1145, 22.2877, 68.2207)
+
+[node name="Person9" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75042, 22.2877, 68.2207)
+
+[node name="Person10" parent="." instance=ExtResource("1_cl6tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.3949, 18.0505, 42.2719)
+
+[node name="Furniture" type="CSGCombiner3D" parent="." groups=["nav"]]
+use_collision = true
+
+[node name="Tabel" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1927, 0, 0)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel11" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.4924, 0, -76.1674)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel11"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel11"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 17.7885)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel11"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel11"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 17.7885)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 35.1481)
+size = Vector3(11.7559, 1, 36.8757)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel2" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1927, 0, -22.976)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel2"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel2"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel2"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel2"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel3" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1927, 0, -45.8944)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel3"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel3"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel3"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel3"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel4" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1927, 0, -68.8754)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel4"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel4"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel4"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel4"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel9" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1927, 0, -91.617)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel9"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel9"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel9"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel9"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel10" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9159, 0.0321083, -91.5915)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel10"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel10"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel10"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel10"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel5" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1756, 0, 0)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel5"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel5"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel5"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel5"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Meeting  tabel" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.1899, 0, 0)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Meeting  tabel"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, -2.80583, 6.28058, 48.1851)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Meeting  tabel"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 2.04424, 6.28058, 5.02175)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Meeting  tabel"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 15.7779, 6.28058, 48.1851)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Meeting  tabel"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 15.83, 6.28058, 5.02175)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Meeting  tabel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56034, 12.4382, 27.265)
+size = Vector3(20.8726, 1, 45.6346)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel6" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1756, 0, -22.976)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel6"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel6"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel6"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel6"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel7" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1756, 0, -45.8944)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel7"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel7"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel7"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel7"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="Tabel8" type="CSGCombiner3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1756, 0, -68.8754)
+
+[node name="Leg" type="CSGCylinder3D" parent="Furniture/Tabel8"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg2" type="CSGCylinder3D" parent="Furniture/Tabel8"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 0, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg3" type="CSGCylinder3D" parent="Furniture/Tabel8"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 52.7422)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Leg4" type="CSGCylinder3D" parent="Furniture/Tabel8"]
+transform = Transform3D(1, 0, 0, 0, 1.00076, 0, 0, 0, 1, 10.0112, 6.28058, 32.8393)
+height = 12.5743
+material = SubResource("StandardMaterial3D_ka0bm")
+
+[node name="Desk" type="CSGBox3D" parent="Furniture/Tabel8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16796, 12.4382, 42.782)
+size = Vector3(11.7559, 1, 21.6078)
+material = SubResource("StandardMaterial3D_v6hbb")
+
+[node name="DIv" type="CSGBox3D" parent="Furniture"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.2111, 12.7507, -3.47988)
+size = Vector3(1, 26.5014, 113.54)
+
+[node name="DIv2" type="CSGBox3D" parent="Furniture"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 28.2111, 12.7507, -37.3882)
+size = Vector3(0.869141, 26.5014, 30.1148)
+
+[node name="DIv3" type="CSGBox3D" parent="Furniture"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 28.2111, 12.7507, -14.214)
+size = Vector3(0.869141, 26.5014, 30.1148)
+
+[node name="DIv4" type="CSGBox3D" parent="Furniture"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 28.2111, 12.7507, 8.0073)
+size = Vector3(0.869141, 26.5014, 30.1148)
+
+[node name="DIv5" type="CSGBox3D" parent="Furniture"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 28.2111, 12.7507, 31.5394)
+size = Vector3(0.869141, 26.5014, 30.1148)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Furniture"]
+transform = Transform3D(-1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, -1, 35.5238, 35.381, -84.3751)
+size = Vector3(15.4864, 0.401367, 0.700684)
+
+[node name="Basic" type="CSGCombiner3D" parent="." groups=["nav"]]
+use_collision = true
+
+[node name="Base" type="CSGBox3D" parent="Basic"]
+size = Vector3(180, 0.177, 180)
+material = SubResource("StandardMaterial3D_x2vil")
+
+[node name="Wall" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.468262, 27.4683, 0.492432)
+size = Vector3(180, 55.9365, 180)
+material = SubResource("StandardMaterial3D_6q3if")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Basic/Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.16895, 0)
+operation = 2
+size = Vector3(170, 110.951, 170)
+
+[node name="Ceiling" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 55.0037, 0)
+size = Vector3(180, 2, 180)
+
+[node name="Wall3" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.103, 27.3191, -19.6636)
+size = Vector3(58.6185, 55.6383, 2.47792)
+material = SubResource("StandardMaterial3D_mr6ce")
+
+[node name="Wall2" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7653, 27.3448, 0.325806)
+size = Vector3(2.96895, 55.6896, 174.399)
+material = SubResource("StandardMaterial3D_mr6ce")
+
+[node name="DoorFrame" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.6632, 15.8858, 43.2551)
+size = Vector3(16.4456, 32.3716, 1)
+material = SubResource("StandardMaterial3D_dcw72")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Basic/DoorFrame"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0925217, -0.727739, 0.337509)
+operation = 2
+size = Vector3(13.0874, 30.5638, 3.65607)
+
+[node name="Door" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -32.8718, 15.1537, 56.3724)
+size = Vector3(12.9061, 30.9074, 1)
+material = SubResource("StandardMaterial3D_56cq8")
+
+[node name="Handel" type="CSGBox3D" parent="Basic/Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.27966, 0.114555, -0.694344)
+size = Vector3(0.258057, 0.744339, 0.524658)
+material = SubResource("StandardMaterial3D_vds0g")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Basic/Door/Handel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0188, -0.00523186, -0.228516)
+size = Vector3(2.29565, 0.75034, 0.143311)
+material = SubResource("StandardMaterial3D_8mt11")
+
+[node name="DoorWay" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.447, 15.3386, 43.076)
+operation = 2
+size = Vector3(12.9061, 30.5377, 8.26514)
+material = SubResource("StandardMaterial3D_56cq8")
+
+[node name="DoorFrame2" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.6632, 16.5833, -77.6924)
+size = Vector3(16.4456, 30.9767, 1)
+material = SubResource("StandardMaterial3D_dcw72")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Basic/DoorFrame2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0925217, -0.727739, 0.337509)
+operation = 2
+size = Vector3(13.0874, 30.5638, 3.65607)
+
+[node name="Door2" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -37.1555, 15.1537, -67.7809)
+size = Vector3(12.9061, 30.9074, 1)
+material = SubResource("StandardMaterial3D_56cq8")
+
+[node name="Handel" type="CSGBox3D" parent="Basic/Door2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.27966, 0.114555, -0.694344)
+size = Vector3(0.258057, 0.744339, 0.524658)
+material = SubResource("StandardMaterial3D_vds0g")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Basic/Door2/Handel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0188, -0.00523186, -0.228516)
+size = Vector3(2.29565, 0.75034, 0.143311)
+material = SubResource("StandardMaterial3D_8mt11")
+
+[node name="DoorWay2" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.447, 15.3412, -77.8715)
+operation = 2
+size = Vector3(12.9061, 30.5324, 8.26514)
+material = SubResource("StandardMaterial3D_56cq8")
+
+[node name="DoorFrame3" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 86.8885, 16.0855, 60.5119)
+size = Vector3(16.4456, 31.9723, 1)
+material = SubResource("StandardMaterial3D_dcw72")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Basic/DoorFrame3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0925217, -0.727739, 0.337509)
+operation = 2
+size = Vector3(13.0874, 30.5638, 3.65607)
+
+[node name="Door3" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 78.3962, 15.1537, 70.4234)
+size = Vector3(12.9061, 30.9074, 1)
+material = SubResource("StandardMaterial3D_56cq8")
+
+[node name="Handel" type="CSGBox3D" parent="Basic/Door3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.27966, 0.114555, -0.694344)
+size = Vector3(0.258057, 0.744339, 0.524658)
+material = SubResource("StandardMaterial3D_vds0g")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Basic/Door3/Handel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0188, -0.00523186, -0.228516)
+size = Vector3(2.29565, 0.75034, 0.143311)
+material = SubResource("StandardMaterial3D_8mt11")
+
+[node name="DoorWay3" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 93.8832, 15.6037, 60.3328)
+operation = 2
+size = Vector3(12.9061, 30.0073, 23.8221)
+material = SubResource("StandardMaterial3D_56cq8")
+
+[node name="Hallway" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.7607, 13.411, 47.0954)
+size = Vector3(21.4184, 35.8182, 41.3393)
+
+[node name="Hallway2" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.2265, 14.0746, 45.8602)
+operation = 2
+size = Vector3(18.7912, 26.9435, 42.2864)
+
+[node name="Slope" type="CSGBox3D" parent="Basic"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 100.289, 39.8668, 46.5661)
+size = Vector3(1.41174, 16.6687, 32.2819)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_qp5wr")
+navigation_layers = 9
+
+[node name="test" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1892, -0.234594, -49.9501)
+
+[node name="BlockTable" type="StaticBody3D" parent="." groups=["nav"]]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BlockTable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.41212, 37.3393, -13.4984)
+shape = SubResource("BoxShape3D_ubyie")

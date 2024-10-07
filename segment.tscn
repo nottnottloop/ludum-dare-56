@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsbheltihfui"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_6fr63"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ftvh"]
+albedo_color = Color(0.969674, 0.956275, 0.992629, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ctqcn"]
+radius = 0.0965365
+
+[node name="Segment" type="RigidBody3D" groups=["obj"]]
+mass = 0.001
+linear_damp = 38.136
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.30516e-09, 8.30516e-09, 0.19, 0, 0.19, -8.30516e-09, -0.19, -3.6303e-16, -8.30516e-09, 0, 0.0012784, 0)
+mesh = SubResource("SphereMesh_6fr63")
+surface_material_override/0 = SubResource("StandardMaterial3D_0ftvh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 0, 1, -4.37114e-08, -1, 0, 1.91069e-15, 0, 0.00302848, 0)
+shape = SubResource("SphereShape3D_ctqcn")
+disabled = true
+
+[node name="Joint" type="JoltPinJoint3D" parent="."]
+node_a = NodePath("..")
+exclude_nodes_from_collision = false
+transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 1.55568e-05, 0.00571723, -0.0110245)
